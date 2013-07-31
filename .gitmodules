@@ -1,0 +1,3 @@
+[submodule "xcanvas"]
+	path = xcanvas
+	url = git@github.com:usagi/xcanvas.git
