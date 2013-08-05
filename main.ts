@@ -6,7 +6,7 @@ class tsg_1_t extends xcanvas.game_t {
   
   initialize(){
     super.initialize();
-    this.sm = new xcanvas.input_manager_t();
+    this.sm = new xcanvas.scene_manager_t(this, new scene_1_t());
     this.components.push(this.sm);
     this.im = new xcanvas.input_manager_t();
     this.components.push(this.im);
@@ -14,8 +14,7 @@ class tsg_1_t extends xcanvas.game_t {
 }
 
 class scene_1_t extends xcanvas.scene_t {
-  get tsg_1() { return <tsg_1>this.game; }
-
+  get tsg_1() { return <tsg_1_t>this.game; }
   
   update(game_time: xcanvas.game_time_t){
     super.update(game_time);
