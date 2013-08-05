@@ -18,7 +18,7 @@ class scene_1_t extends xcanvas.scene_t {
   
   update(game_time: xcanvas.game_time_t){
     super.update(game_time);
-    console.log(this.tsg_1.im);
+    console.log(this.tsg_1.im.get_state(xcanvas.input_e.button_A));
   }
 }
 
