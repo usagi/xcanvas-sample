@@ -13,12 +13,28 @@ class tsg_1_t extends xcanvas.game_t {
   }
 }
 
-class scene_1_t extends xcanvas.scene_t {
+class my_scene_base_t extends xcanvas.scene_t {
   get tsg_1() { return <tsg_1_t>this.game; }
-  
+  get im() { return this.tsg_1.im; }
+  get sm() { return this.tsg_1.sm; }
+}
+
+// default scene; title call
+class scene_1_t extends my_scene_base_t {
   update(game_time: xcanvas.game_time_t){
     super.update(game_time);
-    console.log(this.tsg_1.im.get_state(xcanvas.input_e.button_A));
+    if(this.im.is_press(xcanvas.input_e.start)){
+      console.log('scene_1_t/update: start button pressed')
+      //this.sm.push();
+    }
+  }
+}
+
+// game sample scene
+class scene_2_t extends my_scene_base_t {i
+  initialize(){
+    //var player_character = new player_character_t();
+    //this.components.push(player_character);
   }
 }
 
